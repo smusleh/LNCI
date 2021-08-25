@@ -10,7 +10,7 @@ Python class to generate imporved Kmer features based on formulas in PLEK papper
 improved Kmer scheme to representDNA seqences in Fasta file. The link to teh paper is
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4177586/pdf/12859_2013_Article_6586.pdf
 '''
-class plek_kmer:
+class Weighted_kmer:
     def __init__(self, fasta_file, k, pk, normalize=True):
         self.file = fasta_file
         self.k = k
@@ -43,12 +43,9 @@ class plek_kmer:
         return kmer
     
     #def Generate_PLEK_Kmer_Features(self,file, k=2, PK=3, normalize=True):
-    def Generate_PLEK_Kmer_Features(self):
+    def Generate_weighted_kmer_Features(self):
         '''
-            Generate imporved Kmer features based on formulas in PLEK papper which uses improved Kmer scheme to represent
-            DNA seqences in Fasta file. The link to teh paper is
-            https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4177586/pdf/12859_2013_Article_6586.pdf
-
+            Generate imporved weighted Kmer features 
             input_data: input DNA Fasta file : Text file with seq id and seq of ACTG
             K : Kmer value (1,2,3,4,5,6,) : integer value
             normalize: boolean if TRUE normalize: COUNT / Seq-length
